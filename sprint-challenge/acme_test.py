@@ -1,7 +1,10 @@
 #!/usr/bin/env python
 import unittest
 from acme import Product
-from acme_report import generate_products, adj, noun
+from acme_report import generate_products, adj, noun, inventory_report
+
+import io
+import sys
 
 
 class AcmeProductTests(unittest.TestCase):
@@ -43,6 +46,16 @@ class AcmeReportTests(unittest.TestCase):
             self.assertIn(x[1], noun)
 
     # STRETCH, for inventory_report()
+    def test_inventory_report(self):
+        """Tests that the inventory report summary is correct."""
+        products = [Product('test1'), Product('test1', 20, 40, 1)]
+        final_value = 'ACME CORPORATION OFFICIAL INVENTORY REPORT\nUnique product names: 1\nAverage price: 15\nAverage weight: 30\nAverage flammability: 0.75\n'
+
+        capturedOutput = io.StringIO()
+        sys.stdout = capturedOutput
+        inventory_report(products)
+        sys.stdout = sys.__stdout__
+        self.assertEqual(capturedOutput.getvalue(), final_value)
 
 
 if __name__ == '__main__':

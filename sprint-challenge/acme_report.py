@@ -23,12 +23,13 @@ def generate_products(count=30):
 
 def inventory_report(li):
     """Takes a list of producs and returns a summary."""
+    name_list = [product.name for product in li]
     avg_price = mean([product.price for product in li])
     avg_weight = mean([product.weight for product in li])
     avg_flammability = mean([product.flammability for product in li])
 
     print('ACME CORPORATION OFFICIAL INVENTORY REPORT')
-    print(f'Unique product names: {len(set(li))}')
+    print(f'Unique product names: {len(set(name_list))}')
     print(f'Average price: {avg_price}')
     print(f'Average weight: {avg_weight}')
     print(f'Average flammability: {avg_flammability}')
