@@ -262,11 +262,18 @@ career here, you'll have to answer the following:
 - What, in your opinion, is an important part of code reviews? That is, what is
   something you pay attention to when you review code, and that you appreciate
   when others do the same for your code?
+
+```
+In my opinion, an important part of code reviews is readability. Is the code in question readable to a developer reviewing your work? If they had no idea what the code was supposed to do, could they still make sense of it through your code? I pay attention to this and appreciate when others review my work for clever code, understandable logic, and clean styling.
+```
+
 - We have an awful lot of computers here, and it gets pretty confusing with
   slightly different things running on all of them. How could containers help us
   improve this situation?
 
-Answer both of these questions (baseline ~5 sentences) here in text.
+```
+Containers can help with this situation because they allow applications to run in secluded environments. Developers can create predictable environments where their applications are isolated from other applications. This allows for consistency no matter where the application is deployed. These containers can run anywhere and on any operating system without the hassle of compatability.
+```
 
 ### Part 8 - Turn it in!
 
