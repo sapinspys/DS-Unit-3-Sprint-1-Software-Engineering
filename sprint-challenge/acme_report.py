@@ -11,7 +11,7 @@ def generate_products(count=30):
     product_list = []
 
     for _ in range(count):
-        name =  f'{adj[randint(0,len(adj))]} {noun[randint(0,len(noun))]}'
+        name =  f'{adj[randint(0,len(adj)-1)]} {noun[randint(0,len(noun)-1)]}'
         price = randint(5,100)
         weight = randint(5, 100)
         flammability = uniform(0, 2.5)
