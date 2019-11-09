@@ -1,6 +1,7 @@
+#!/usr/bin/env python
 import unittest
 from acme import Product
-from acme_report import generate_products, ADJECTIVES, NOUNS
+from acme_report import generate_products
 
 
 class AcmeProductTests(unittest.TestCase):

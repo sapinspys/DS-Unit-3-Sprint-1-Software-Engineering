@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from random import randint, uniform
 from statistics import mean
 from acme import Product
@@ -18,7 +19,7 @@ def generate_products(count=30):
     
     return product_list
 
-def inventory_report(li)
+def inventory_report(li):
     """Takes a list of producs and returns a summary."""
     avg_price = mean([product.price for product in li])
     avg_weight = mean([product.weight for product in li])
