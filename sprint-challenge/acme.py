@@ -30,8 +30,8 @@ class Product:
 
 
 class BoxingGlove(Product):
-    def __init__(self, name, price=10, weight=10, flammability=0.5):
-        super().__init__(name, price, weight, flammability)
+    def __init__(self, name, weight=10):
+        super().__init__(name, weight)
 
     def explode(self):
         return "...it's a glove."
